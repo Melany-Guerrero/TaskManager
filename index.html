@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="TaskManager: aplicación de gestión de tareas con JavaScript.">
+
+    <title>TaskManager | Gestión de tareas</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>TaskManager</h1>
+        <p>Organiza tus tareas de manera sencilla.</p>
+    </header>
+
+    <main>
+        <section id="dashboard">
+            <h2>Mi panel de tareas</h2>
+            <p>Total de tareas: <span id="total-tasks">0</span></p>
+            <p>Pendientes: <span id="pending-tasks">0</span></p>
+            <p>Completadas: <span id="completed-tasks">0</span></p>
+        </section>
+
+        <section id="task-form-section">
+            <h2>Mis tareas</h2>
+            <p>Aquí podrás crear, consultar y administrar tus tareas.</p>
+        </section>
+
+        <section id="task-list-section">
+            <h2>Lista de tareas</h2>
+            <p id="empty-message">Todavía no hay tareas para mostrar.</p>
+            <div id="task-list"></div>
+        </section>
+
+        <div id="notification" role="status" aria-live="polite"></div>
+    </main>
+
+    <footer>
+        <p>TaskManager - Proyecto académico de JavaScript Vanilla.</p>
+    </footer>
+
+</body>
+</html>
