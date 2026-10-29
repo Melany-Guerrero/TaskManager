@@ -27,10 +27,59 @@
             <p>Completadas: <span id="completed-tasks">0</span></p>
         </section>
 
-        <section id="task-form-section">
-            <h2>Mis tareas</h2>
-            <p>Aquí podrás crear, consultar y administrar tus tareas.</p>
-        </section>
+<section id="task-form-section">
+    <h2 id="form-heading">Crear una tarea</h2>
+
+    <form id="task-form" class="task-form">
+
+        <div class="form-group">
+            <label for="task-title">Título de la tarea *</label>
+            <input
+                type="text"
+                id="task-title"
+                name="title"
+                maxlength="100"
+                placeholder="Ej. Estudiar JavaScript"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="task-description">Descripción</label>
+            <textarea
+                id="task-description"
+                name="description"
+                maxlength="500"
+                placeholder="Describe brevemente la tarea"
+            ></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="task-priority">Prioridad</label>
+            <select id="task-priority" name="priority">
+                <option value="high">Alta</option>
+                <option value="medium" selected>Media</option>
+                <option value="low">Baja</option>
+            </select>
+        </div>
+
+        <div class="task-actions">
+            <button type="submit" id="submit-task" class="btn btn-primary">
+                Agregar tarea
+            </button>
+
+            <button
+                type="button"
+                id="cancel-edit"
+                class="btn btn-secondary"
+                hidden
+            >
+                Cancelar edición
+            </button>
+        </div>
+
+    </form>
+</section>
 
         <section id="task-list-section">
             <h2>Lista de tareas</h2>
