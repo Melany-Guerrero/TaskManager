@@ -81,11 +81,48 @@
     </form>
 </section>
 
-        <section id="task-list-section">
-            <h2>Lista de tareas</h2>
-            <p id="empty-message">Todavía no hay tareas para mostrar.</p>
-            <div id="task-list"></div>
-        </section>
+<section id="task-list-section">
+
+    <h2>Lista de tareas</h2>
+
+    <div class="task-controls">
+
+        <input
+            type="search"
+            id="search-tasks"
+            class="search-input"
+            placeholder="Buscar por título..."
+            aria-label="Buscar tareas por título"
+        >
+
+        <select
+            id="filter-status"
+            class="filter-select"
+            aria-label="Filtrar tareas por estado"
+        >
+            <option value="all">Todas las tareas</option>
+            <option value="pending">Pendientes</option>
+            <option value="completed">Completadas</option>
+        </select>
+
+        <select
+            id="sort-tasks"
+            class="sort-select"
+            aria-label="Ordenar tareas"
+        >
+            <option value="newest">Más recientes</option>
+            <option value="oldest">Más antiguas</option>
+            <option value="high">Prioridad: Alta a Baja</option>
+            <option value="low">Prioridad: Baja a Alta</option>
+        </select>
+
+    </div>
+
+    <p id="empty-message">Todavía no hay tareas para mostrar.</p>
+
+    <div id="task-list"></div>
+
+</section>
 
         <div id="notification" role="status" aria-live="polite"></div>
     </main>
